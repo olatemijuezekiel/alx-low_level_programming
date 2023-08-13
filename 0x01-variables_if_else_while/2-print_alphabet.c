@@ -1,17 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - main functon
+ * main - Entry point
  *
- * Return: always 0
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char i;
+char letter = 'a';
 
-	for (char i = 'a'; i <= 'z'; c++)
-		putchar(i)
-	putchar("\n");
-	return (0);
+while (letter <= 'z')
+{
+putchar(letter);
+letter++;
+}
+
+putchar('\n');
+
+return (0);
 }
