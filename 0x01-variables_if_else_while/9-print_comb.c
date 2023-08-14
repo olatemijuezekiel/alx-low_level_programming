@@ -1,24 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - main function
+ * main - Entry point
  *
- * Return: always 0
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i;
+int number;
 
-	for (i = 0 ; i < 10 ; i++)
-	{
-		putchar(i + 0);
-		if (i != 9)
-		{
-			putchar(",");
-			putchar(" ");
-		}
-	}
-	putchar("\n");
-	return (0);
+for (number = 0; number <= 9; number++)
+{
+putchar(number + '0');
+
+if (number < 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+
+putchar('\n');
+
+return (0);
 }
