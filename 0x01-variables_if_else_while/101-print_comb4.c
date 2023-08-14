@@ -1,37 +1,33 @@
 #include <stdio.h>
 
-void putchar_digit(char digit)
-{
-	putchar(digit + '0');
-}
-
-void print_combinations(void)
-{
-int i, j, k;
-
-for (i = 0; i <= 7; i++)
-{
-for (j = i + 1; j <= 8; j++)
-{
-for (k = j + 1; k <= 9; k++)
-{
-putchar_digit(i);
-putchar_digit(j);
-putchar_digit(k);
-
-if (i != 7 || j != 8 || k != 9)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-}
-putchar('\n');
-}
-
+/**
+ * main - prints all possible different combinations of three digits
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-print_combinations();
-return (0);
+	int n, m, l;
+
+	for (n = 48; n < 58; n++)
+	{
+		for (m = 49; m < 58; m++)
+		{
+			for (l = 50; l < 58; l++)
+			{
+				if (l > m && m > n)
+				{
+					putchar(n);
+					putchar(m);
+					putchar(l);
+					if (n != 55 || m != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
