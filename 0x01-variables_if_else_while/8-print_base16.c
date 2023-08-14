@@ -1,20 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - main function
+ * main - Entry point
  *
- * Return: always 0
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i;
-	char j;
+char digit;
 
-	for (i = 0 ; i < 10 ; i++)
-		putchar(i + '0');
-	for (j = 'a' ; j <= 'f' ; j++)
-		putchar(j);
-	putchar("\n");
-	return (0);
+for (digit = '0'; digit <= '9'; digit++)
+{
+putchar(digit);
+}
+
+for (digit = 'a'; digit <= 'f'; digit++)
+{
+putchar(digit);
+}
+
+putchar('\n');
+
+return (0);
 }
